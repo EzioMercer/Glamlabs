@@ -1,0 +1,50 @@
+.loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100vw;
+	height: 100vh;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.loader::before {
+	--size: 50px;
+	--outer-size: 100%;
+	--inner-size: 65%;
+	--border-width: calc((var(--outer-size) - var(--inner-size)) / 2);
+	--radius: 70.71%; /* 100 / sqrt(2) */
+	--color: #ff1c8a;
+
+	content: '';
+
+	width: var(--size);
+	height: var(--size);
+
+	border-radius: 50%;
+
+	background-image:
+			radial-gradient(var(--bg-color) var(--radius), transparent var(--radius)),
+			conic-gradient(transparent 30%, var(--color)),
+			radial-gradient(var(--color) var(--radius), transparent var(--radius));
+	background-position: center, center, top;
+	background-repeat: no-repeat;
+	background-size:
+			var(--inner-size) var(--inner-size),
+			var(--outer-size) var(--outer-size),
+			var(--border-width) var(--border-width);
+
+	animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
