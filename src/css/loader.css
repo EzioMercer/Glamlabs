@@ -9,6 +9,10 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+
+	background-color: var(--bg-color);
+
+	z-index: 1;
 }
 
 .loader::before {
@@ -16,13 +20,13 @@
 	--outer-size: 100%;
 	--inner-size: 65%;
 	--border-width: calc((var(--outer-size) - var(--inner-size)) / 2);
-	--radius: 70.71%; /* 100 / sqrt(2) */
+	--radius: 70.71%; /* 100% / sqrt(2) */
 	--color: #ff1c8a;
 
 	content: '';
 
 	width: var(--size);
-	height: var(--size);
+	aspect-ratio: 1;
 
 	border-radius: 50%;
 
