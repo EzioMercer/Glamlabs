@@ -1,4 +1,5 @@
 import Page from './page.js';
+import { getUser } from './userUtils.js';
 
 const removeLoader = () => {
 	const loader = document.querySelector('.loader');
@@ -15,12 +16,23 @@ const createPages = (pagesContainer, pagesData) => {
 	const step = 100 / pagesData.length;
 	let preloadedPostersCount = 0;
 	const img = new Image();
+	const user = getUser();
 	
 	/**
 	 * @param {number} i
 	 */
-	const loadNext = i => pagesContainer.style.transform = `translateX(-${step * i}%)`
-	const buy = () => alert('Successfully buying');
+	const loadNext = i => {
+		if (i === pagesData.length - 1) {
+			user.completedOnboarding = true;
+		}
+		
+		pagesContainer.style.transform = `translateX(-${step * i}%)`;
+	}
+	const buy = () => {
+		user.didBuy = true;
+		
+		alert('Successfully buying');
+	}
 	
 	pagesData.forEach((pageData, i) => {
 		const isLast = i === pagesData.length - 1;
