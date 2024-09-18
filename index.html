@@ -3,19 +3,27 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport"
-			  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+			  content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="description" content="Presentation of product">
 		<title>Glamlabs</title>
 		<link rel="shortcut icon" href="src/assets/images/favicon/favicon.avif" type="image/x-icon">
+
+		<link rel="preload" href="./src/css/colors.css" as="style"/>
+		<link rel="preload" href="./src/css/global.css" as="style"/>
+		<link rel="preload" href="./src/css/loader.css" as="style"/>
+		<link rel="preload" href="./src/css/page.css" as="style"/>
+		<link rel="preload" href="./src/css/pages.css" as="style"/>
+		<link rel="preload" href="./src/css/reset.css" as="style"/>
+
 		<link rel="stylesheet" href="index.css" />
-		<script src="index.js" type="module"></script>
+
+		<script async src="index.js" type="module"></script>
 	</head>
 	<body>
-		<div class="loader"></div>
-		<div class="page">
-			<p class="heading">Welcome to Glam!</p>
-			<video class="video" autoplay loop muted src="./src/assets/videos/first.mp4" poster="https://s3.amazonaws.com/cdn.getglam.app/content/paywalls/240515_web2web_video1_v04.jpg"></video>
-			<button class="next">Next</button>
+		<div class="loader">
+			<p>Loading some data. Please wait...</p>
 		</div>
+		<div class="pages"></div>
 	</body>
 </html>

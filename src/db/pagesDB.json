@@ -1,0 +1,19 @@
+{
+  "pagesData": [
+    {
+      "videoUrl": "./src/assets/videos/first.mp4",
+      "posterUrl": "https://s3.amazonaws.com/cdn.getglam.app/content/paywalls/240515_web2web_video1_v04.jpg",
+      "title": "Welcome to Glam!"
+    },
+    {
+      "videoUrl": "https://cdn.getglam.app/content/paywalls/240515_web2web_video2_v01.mp4",
+      "posterUrl": "https://s3.amazonaws.com/cdn.getglam.app/content/paywalls/240515_web2web_video2_v01.jpeg",
+      "title": "Match your Aesthetic"
+    },
+    {
+      "videoUrl": "https://cdn.getglam.app/content/paywalls/240515_web2web_video3_v01.mp4",
+      "posterUrl": "https://s3.amazonaws.com/cdn.getglam.app/content/paywalls/240515_web2web_video3_v01.jpeg",
+      "title": "Explore 100+ Styles"
+    }
+  ]
+}

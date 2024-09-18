@@ -1,0 +1,8 @@
+@import 'page.css';
+
+.pages {
+	display: flex;
+	width: fit-content;
+
+	transition: transform 1s ease-out;
+}
